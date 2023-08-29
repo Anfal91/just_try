@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.controls {
+    bottom: 20px;
+    align-items: center;
+  }
+  .controls p{
+    font-family: math;
+  }
+  .controls .moveP{
+    position: absolute;
+    bottom: 5%;
+    left: 9%;
+    color: white;
+  }
+  .controls .viewP{
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    color: white;
+  }
+  .controls h6{
+    margin: 0;
+  }
+  .control-button {
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #0000009e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .control-button:hover {
+    background-color: #000000;
+  }
+  #btnForward{
+      position: absolute;
+      bottom: 16%;
+      left: 10%;
+  }
+  #btnBackward{
+      position: absolute;
+      bottom: 8%;
+      left: 10%;
+  }
+  #btnStrafeLeft{
+      position: absolute;
+      bottom: 12%;
+      left: 7%;
+  }
+  #btnStrafeRight{
+      position: absolute;
+      bottom: 12%;
+      left: 13%;
+  }
+  #btnUp{
+      position: absolute;
+      bottom: 16%;
+      right: 10%;
+  }
+  #btnDown{
+      position: absolute;
+      bottom: 8%;
+      right: 10%;
+  }
+  #btnLeftCam{
+      position: absolute;
+      bottom: 12%;
+      right: 12.5%;
+  }
+  #btnRightCam{
+      position: absolute;
+      bottom: 12%;
+      right: 7%;
+  }
+
+  @media screen and (max-width:1170px) {
+    .control-button h6{
+        display: none;
+    }
+  }
+  @media screen and (max-width:1110px) {
+    .control-button h5{
+        display: none;
+    }
+    #btnForward{
+        position: absolute;
+        bottom: 17%;
+        left: 10%;
+    }
+    #btnBackward{
+        position: absolute;
+        bottom: 7%;
+        left: 10%;
+    }
+    #btnStrafeLeft{
+        position: absolute;
+        bottom: 12.5%;
+        left: 6.5%;
+    }
+    #btnStrafeRight{
+        position: absolute;
+        bottom: 12.5%;
+        left: 13.5%;
+    }
+    #btnUp{
+        position: absolute;
+        bottom: 17%;
+        right: 10%;
+    }
+    #btnDown{
+        position: absolute;
+        bottom: 7%;
+        right: 10%;
+    }
+    #btnLeftCam{
+        position: absolute;
+        bottom: 12.5%;
+        right: 13%;
+    }
+    #btnRightCam{
+        position: absolute;
+        bottom: 12.5%;
+        right: 6.5%;
+    }
+  }
+
+  @media screen and (max-width:970px) {
+    .moveP{
+        left: 8.7% !important;
+    }
+    .controls p{
+        bottom: 4% !important;
+    }
+    #btnForward{
+        position: absolute;
+        bottom: 19%;
+        left: 10%;
+    }
+    #btnBackward{
+        position: absolute;
+        bottom: 6.5%;
+        left: 10%;
+    }
+    #btnStrafeLeft{
+        position: absolute;
+        bottom: 13%;
+        left: 5%;
+    }
+    #btnStrafeRight{
+        position: absolute;
+        bottom: 13%;
+        left: 15%;
+    }
+    #btnUp{
+        position: absolute;
+        bottom: 19%;
+        right: 10%;
+    }
+    #btnDown{
+        position: absolute;
+        bottom: 6.5%;
+        right: 10%;
+    }
+    #btnLeftCam{
+        position: absolute;
+        bottom: 13%;
+        right: 14.7%;
+    }
+    #btnRightCam{
+        position: absolute;
+        bottom: 13%;
+        right: 4.7%;
+    }
+  }
+  @media screen and (max-width:720px) {
+    .moveP{
+        left: 8% !important;
+    }
+    #btnForward{
+        position: absolute;
+        bottom: 18.5%;
+        left: 10%;
+    }
+    #btnBackward{
+        position: absolute;
+        bottom: 7%;
+        left: 10%;
+    }
+    #btnStrafeLeft{
+        position: absolute;
+        bottom: 13%;
+        left: 3.5%;
+    }
+    #btnStrafeRight{
+        position: absolute;
+        bottom: 13%;
+        left: 16.5%;
+    }
+    #btnUp{
+        position: absolute;
+        bottom: 18.5%;
+        right: 10%;
+    }
+    #btnDown{
+        position: absolute;
+        bottom: 7%;
+        right: 10%;
+    }
+    #btnLeftCam{
+        position: absolute;
+        bottom: 13%;
+        right: 15.3%;
+    }
+    #btnRightCam{
+        position: absolute;
+        bottom: 13%;
+        right: 3.7%;
+    }
+  }
+  @media screen and (max-width:500px) {
+    .controls p{
+        bottom: 5% !important;
+        left: 7% !important;
+    }
+    #btnForward{
+        position: absolute;
+        bottom: 17.5%;
+        left: 10%;
+    }
+    #btnBackward{
+        position: absolute;
+        bottom: 8.5%;
+        left: 10%;
+    }
+    #btnStrafeLeft{
+        position: absolute;
+        bottom: 13%;
+        left: 3.5%;
+    }
+    #btnStrafeRight{
+        position: absolute;
+        bottom: 13%;
+        left: 16.5%;
+    }
+    #btnUp{
+        position: absolute;
+        bottom: 17.5%;
+        right: 10%;
+    }
+    #btnDown{
+        position: absolute;
+        bottom: 8.5%;
+        right: 10%;
+    }
+    #btnLeftCam{
+        position: absolute;
+        bottom: 13%;
+        right: 15.3%;
+    }
+    #btnRightCam{
+        position: absolute;
+        bottom: 13%;
+        right: 3.7%;
+    }
+  }
