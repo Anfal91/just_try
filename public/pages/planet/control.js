@@ -65,12 +65,12 @@ class FirstPersonControls {
             this.keystate[evt.which] = false;
         }, false);
 
-        btnForward.addEventListener('mousedown', () => {
+        btnForward.addEventListener('touchstart', () => {
             isButtonHeld = true;
             this.keystate[K_FORWARD] = true;
         });
         
-        btnForward.addEventListener('mouseup', () => {
+        btnForward.addEventListener('touchend', () => {
             isButtonHeld = false;
             this.keystate[K_FORWARD] = false;
         });
