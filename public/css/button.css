@@ -243,12 +243,12 @@
     #btnStrafeLeft{
         position: absolute;
         bottom: 13%;
-        left: 3.5%;
+        left: 1.5%;
     }
     #btnStrafeRight{
         position: absolute;
         bottom: 13%;
-        left: 16.5%;
+        left: 18.5%;
     }
     #btnUp{
         position: absolute;
@@ -263,11 +263,11 @@
     #btnLeftCam{
         position: absolute;
         bottom: 13%;
-        right: 15.3%;
+        right: 18.3%;
     }
     #btnRightCam{
         position: absolute;
         bottom: 13%;
-        right: 3.7%;
+        right: 1% !important;
     }
   }
