@@ -20,6 +20,16 @@ body {
     height: 100%;
     width: 100%;
   }
+  @media screen and (max-width:500px){
+    .planetCard .row .cardImg{
+      height: 150px;
+      text-align: center;
+    }
+    .planetCard img{
+      height: 100%;
+      width: auto;
+    }
+  }
   .cardCloseBtn{
     text-align: center;
   }
