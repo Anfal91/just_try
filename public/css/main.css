@@ -1,7 +1,49 @@
 body {
     font-family: Arial, sans-serif;
   }
-  
+  .planetCard{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+    height: max-content;
+    background-color: rgb(255 255 255 / 23%);
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 0px 20px 20px 20px;
+    cursor: pointer;
+  }
+  .planetCard img{
+    height: 100%;
+    width: 100%;
+  }
+  .cardCloseBtn{
+    text-align: center;
+  }
+  .cardCloseBtn i{
+    background-color: white;
+    padding: 5px 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .visitBtn{
+    text-align: center;
+  }
+  .visitBtn a{
+    background-color: #1c1f22;
+    color: white;
+    width: 100%;
+    font-family: math;
+    font-weight: bold;
+  }
+  .visitBtn a:hover{
+    background-color: #1a1c1f;
+    color: white;
+    border-bottom: 1px solid white;
+  }
   .profile-menu {
     color: #fff;
     text-align: center;

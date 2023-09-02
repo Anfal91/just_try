@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Solar system</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="/css/bootstrap.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <style>
     *{
@@ -12,6 +15,57 @@
     }
 </style>
 <body>
+    <div id="planetCard" class="planetCard">
+      <div id="cardCloseBtn" class="cardCloseBtn">
+        <i class="fas fa-times"></i>
+      </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <img src="/images/planet/mars.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="profile-table mt-4">
+                    <table class="table table-hover table-dark">
+                      <tbody>
+                        <tr>
+                            <th scope="row">Planet</th>
+                            <td>Mars</td>
+                          </tr>
+                        <tr>
+                          <th scope="row">Moons</th>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Mass</th>
+                          <td>10 * 24</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Distance from sun</th>
+                          <td>1,45,454,000 km</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Day equal to</th>
+                          <td>24.5 hour</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Year equal to</th>
+                          <td>687 earth day</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="visitBtn">
+                      <a class="btn" href="/mars">Visit Mars</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script src="/js/bootstrap_popper.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+<script src="/modules/three.min.js"></script>
+<script src="/modules/OrbitControl.js"></script>
+<script src="/js/offcanvas.js"></script>
+<script src="/js/main.js"></script>
 <script type="module" src="/pages/index.js"></script>
 </body>
 </html>
