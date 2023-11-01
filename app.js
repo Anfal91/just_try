@@ -1,30 +1,28 @@
-import dotenv from 'dotenv'
-dotenv.config();
-import express from 'express'
-import cors from 'cors'
-import path, { dirname } from 'path';
-import connectDB from './config/connectdb.js';
-import userRoutes from './routes/userRoutes.js'
+const express = require('express');
+const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes');
+const cookieParser = require('cookie-parser');
+const { requireAuth, checkUser } = require('./middleware/authMiddleware');
+require('dotenv').config();
 const app = express();
-const port = process.env.PORT;
-const DATABASE_URL = process.env.DATABASE_URL;
 
-app.use(cors());
+// middleware
+app.use(express.static('public'));
+app.use(express.json());
+app.use(cookieParser());
 
-connectDB(DATABASE_URL);
-
+// view engine
 app.set('view engine', 'ejs');
 
-app.use(express.urlencoded({extended:true}))
+// database connection
+mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
+  .then((result) => app.listen(3000))
+  .catch((err) => console.log(err));
 
-app.use(express.json())
-app.use("/", userRoutes)
-
-app.set('views', path.resolve('./views'));
-
-app.use(express.static('./public'));
-
-app.listen(port, () => {
-    console.log(`Server running at port http://localhost:${port}`)
-});
-
+// routes
+app.get('*', checkUser);
+app.get('/', (req, res) => res.render('home'));
+app.get('/mars', (req, res) => res.render('mars'));
+app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'));
+app.get('/moon', requireAuth, (req, res) => res.render('moon'));
+app.use(authRoutes);

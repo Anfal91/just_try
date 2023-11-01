@@ -4,10 +4,11 @@ import { OrbitControls } from '../modules/OrbitControls.js'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
+const planetCard = document.getElementById('planetCard');
 const textureLoader = new THREE.TextureLoader();
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer( {antialias: true} );
+renderer.setPixelRatio(window.devicePixelRatio)
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
@@ -78,12 +79,33 @@ const pluto = createPlanete(2.8, '../textures/pluto.jpg', 250);
 const pointLight = new THREE.PointLight(0xFFFFFF, 2, 300);
 scene.add(pointLight);
 
+renderer.domElement.addEventListener('click', onDocumentMouseClick);
 
+function onDocumentMouseClick(event){
+    event.preventDefault();
 
-camera.position.z = 5;
+    const mouse = new THREE.Vector2();
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+    const raycaster = new THREE.Raycaster();
+    raycaster.setFromCamera(mouse, camera);
+
+    const marsIntersects = raycaster.intersectObject(mars.mesh)
+
+    if(marsIntersects.length > 0){
+        onMarsClick();
+    }
+}
+
+function onMarsClick(){
+    planetCard.style.display = 'block';
+}
+camera.position.set(-33,84,116);
 
 controls.update();
 function animate() {
+
     //Self-rotation
     sun.rotateY(0.004);
     mercury.mesh.rotateY(0.004);

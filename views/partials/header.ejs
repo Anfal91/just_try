@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>about</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tilt+Neon&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="fontawesome/css/all.css">
+      <link href="/css/bootstrap.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/main.css">
+      <link rel="stylesheet" href="/css/button.css">
+  </head>
+  <body>
+      <a class="btn menuBtnRight" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample2">
+          <i class="fas fa-bars"></i>
+        </a>
+        
+        
+        <div class="offcanvas offcanvas-end rightSidebar" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Hi <% if (user) { %>
+                <%= user.f_name %>👋
+              <% } else { %>
+                there👋
+              <% } %>
+            </h5>
+            <% if (user) { %>
+              <a class="profileBtn" href="/profile">
+                <i class="fas fa-user-alt"></i>
+              </a>
+            <% } else { %>
+              
+            <% } %>
+
+          </div>
+          <div class="offcanvas-body">
+            <% if (!user) { %>
+              <li><a href="/login">Log in</a></li>
+              <li><a href="/signup" class="btn">Sign up</a></li>
+              <!-- <li><a href="/logout">Log out</a></li> -->
+            <% } else { %>
+            <% } %>
+              <div class="objectOverview">
+                <div class="objOverviewTitle">
+                  <h5 class="offcanvas-title">
+                    Planets
+                  </h5>
+                </div>
+                <div class="objectOverviewList">
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/mercury.png" alt="">
+                      </div>
+                      <div class="col-10">Mercury</div>
+                    </div>
+                  </a>
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/venus.png" alt="">
+                      </div>
+                      <div class="col-10">Venus</div>
+                    </div>
+                  </a>
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/mars.png" alt="">
+                      </div>
+                      <div class="col-10">Mars</div>
+                    </div>
+                  </a>
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/jupiter.png" alt="">
+                      </div>
+                      <div class="col-10">Jupiter</div>
+                    </div>
+                  </a>
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/saturn.png" alt="">
+                      </div>
+                      <div class="col-10">Saturn</div>
+                    </div>
+                  </a>
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/uranus.png" alt="">
+                      </div>
+                      <div class="col-10">Uranus</div>
+                    </div>
+                  </a>
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/neptune.png" alt="">
+                      </div>
+                      <div class="col-10">Neptune</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="objOverviewTitle">
+                  <h5 class="offcanvas-title">
+                    Dwarf Planet
+                  </h5>
+                </div>
+                <div class="objectOverviewList">
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/planet/pluto.png" alt="">
+                      </div>
+                      <div class="col-10">Pluto</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="objOverviewTitle">
+                  <h5 class="offcanvas-title">
+                    Moons
+                  </h5>
+                </div>
+                <div class="objectOverviewList">
+                  <a href="/mars">
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <img class="objectOverviewProfileImg" src="/images/moons/moon.png" alt="">
+                      </div>
+                      <div class="col-10">The Moon</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+          </div>
+        </div>
+      <!-- header end -->
+  
+  
+  
+  
+      <script src="/js/bootstrap_popper.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="/js/bootstrap.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+  <script src="/js/offcanvas.js"></script>
+  </body>
+  </html>

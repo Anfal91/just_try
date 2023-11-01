@@ -34,7 +34,7 @@ body {
       width: auto;
     }
   }
-  @media screen and (width>2000px){
+  @media screen and (width>1000px){
     .planetCard{
       width: 50%;
     }
@@ -186,7 +186,7 @@ body {
   }
   /* sidebar */
   .leftSidebar, .rightSidebar{
-    background-color: #000000cc;
+    background-color: #0d0d0dcc;
     color: white;
 
   }
@@ -194,6 +194,12 @@ body {
     cursor: pointer;
     color: white;
     font-size: 25px;
+  }
+  .profileBtn{
+    background-color: white;
+    color: #1c1f22;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
 .profile-img{
   text-align: center;
@@ -204,4 +210,53 @@ body {
 }
 .profile-table table{
   background-color: #2125298a;
+}
+img.objectOverviewProfileImg{
+  width: 100%;
+}
+.objectOverview .objectOverviewList a{
+  background-color: #ffffff2b;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border-bottom: 3px solid black;
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+}
+.objectOverview .objectOverviewList a:hover{
+  background-color: #ffffff34;
+  border-bottom: none;
+}
+.objOverviewTitle{
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+.objOverviewTitle h5{
+  font-family: 'Bebas Neue', sans-serif;
+}
+/* -------MENU CSS----- */
+.customMenu ul.menuList{
+  background-color: #ffffff30;
+  width: max-content;
+  margin: auto;
+  padding: 10px 15px 0px 15px;
+  border-radius: 9px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}
+.customMenu ul.menuList li{
+  display: inline-block;
+  margin: 0px 10px;
+}
+.customMenu ul.menuList li a{
+  text-decoration: none;
+  color: white;
+}
+.customMenu{
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
 }

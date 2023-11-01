@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar system</title>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="/css/bootstrap.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<body>
+  <a class="btn menuBtnLeft" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+    <i class="fas fa-info"></i>
+  </a>
+  
+  
+  <div class="offcanvas offcanvas-start leftSidebar" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Solar System</h5>
+      <!-- <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+    <i data-bs-dismiss="offcanvas" aria-label="Close" class="fas fa-times sidebarCancelIcon"></i>
+    </div>
+    <div class="offcanvas-body">
+      <div class="profile-img">
+        <img style="width: 100%;" src="/images/solarSystem.jpg" alt="">
+      </div>
+      <div class="profile-table mt-4">
+        <table class="table table-hover table-dark">
+          <tbody>
+            <tr>
+              <th scope="row">Planets</th>
+              <td>8 (discovered)</td>
+            </tr>
+            <tr>
+              <th scope="row">Moons</th>
+              <td>290 (discovered)</td>
+            </tr>
+            <tr>
+              <th scope="row">Dwarf Planet</th>
+              <td>5 (discovered)</td>
+            </tr>
+            <tr>
+              <th scope="row">Stars</th>
+              <td>1 (Only Sun)</td>
+            </tr>
+            <tr>
+              <th scope="row">Age</th>
+              <td>4.571 Billion Years</td>
+            </tr>
+            <tr>
+              <th scope="row">Location</th>
+              <td>Local Interstellar Cloud, Local Bubble, Orion–Cygnus Arm, Milky Way</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- <h5>In Depth</h5> -->
+      <nav class="profile-menu">
+        <ul>
+          <li><a data-bs-dismiss="offcanvas" href="#" class="menu-link" data-target="menu1">Overview</a></li>
+          <li><a data-bs-dismiss="offcanvas" href="#" class="menu-link" data-target="menu2">Formation</a></li>
+          <li><a data-bs-dismiss="offcanvas" href="#" class="menu-link" data-target="menu2">Asteroids and Other Objects</a></li>
+          <li><a data-bs-dismiss="offcanvas" href="#" class="menu-link" data-target="menu2">Satellites By Humans</a></li>
+          <li><a data-bs-dismiss="offcanvas" href="#" class="menu-link" data-target="menu2">The End</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  
+  <%- include ('partials/header') %>
+    <div style="display: none;" id="planetCard" class="planetCard">
+      <div id="cardCloseBtn" class="cardCloseBtn">
+        <i class="fas fa-times"></i>
+      </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 cardImg">
+                <img src="/images/planet/mars.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="profile-table mt-4">
+                    <table class="table table-hover table-dark">
+                      <tbody>
+                        <tr>
+                            <th scope="row">Planet</th>
+                            <td>Mars</td>
+                          </tr>
+                        <tr>
+                          <th scope="row">Moons</th>
+                          <td>2</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Mass</th>
+                          <td>10 * 24</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Distance from sun</th>
+                          <td>1,45,454,000 km</td>
+                        </tr>
+                        <tr>
+                      </tbody>
+                    </table>
+                    <div class="visitBtn">
+                      <a class="btn" href="/mars">Visit Mars</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+  <%- include ('partials/menu') %>
+
+<script src="/js/bootstrap_popper.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+<script src="/modules/three.min.js"></script>
+<script src="/modules/OrbitControl.js"></script>
+<!-- <script src="/js/offcanvas.js"></script> -->
+<script src="/js/main.js"></script>
+<script type="module" src="/pages/index.js"></script>
+</body>
+</html>
