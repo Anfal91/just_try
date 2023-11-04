@@ -94,7 +94,7 @@ body {
     text-decoration: none;
   }
   
-  .menu-content {
+  .menu-content{
     display: none;
     padding: 0px 20px 20px 20px;
     position: absolute;
@@ -134,8 +134,10 @@ body {
   .menu-content p {
     color: #666;
   }
-  .menu-content .contentCloseBtn{
+  .contentCloseBtn{
     text-align: center;
+    position: fixed;
+    left: 48.5%;
   }
   .contentCloseBtn i{
     background-color:rgba(255, 255, 255, 0.438);
@@ -143,13 +145,50 @@ body {
     padding: 5px 15px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    position: fixed;
-    left: 48.5%;
     cursor: pointer;
   }
+  /* setting_menu css */
+  .setting_menu{
+    padding: 0px 20px 20px 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.863);
+    top: 5%;
+    right: 5%;
+    left: 5%;
+    z-index: 1;
+    height: 500px;
+    overflow-y: scroll;
+  }
+  .setting_menu::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #000;
+  }
+  .setting_menu::-webkit-scrollbar{
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+  .setting_menu::-webkit-scrollbar-thumb{
+    background-color: #fff;
+  }
+  .settingImages{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    text-align: center
+  }
+  .settingImages img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
   @media screen and (max-width:450px) {
-    .contentCloseBtn i{
-      left: 44.5%;
+    .contentCloseBtn{
+      left: 44.5% !important;
+    }
+  }
+  @media screen and (max-width:749px) {
+    .contentCloseBtn{
+      left: 47%;
     }
   }
   .menuBtnLeft, .menuBtnRight{

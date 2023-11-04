@@ -23,18 +23,38 @@
                 </a>
             </li>
             <li style="opacity: 0.5;">
-                <a href="#" onclick="csMenu()">
+                <a href="#">
                 <i class="far fa-calendar-alt"></i>
                 <br>
                 Events
                 </a>
             </li>
+            <li>
+                <a href="#" onclick="csMenu()">
+                    <i class="fas fa-cog"></i>
+                    <br>
+                    Settings
+                </a>
+            </li>
         </ul>
     </div>
 </div>
+<div id="setting_menu" class="setting_menu">
+    <div onclick="closeCsMenu()" class="contentCloseBtn">
+      <i id="close-menu" class="fas fa-times menu-link"></i>
+    </div>
+    <div class="settingImages">
+        <img style="border-bottom: 1px solid white;" src="/images/View_Control.png" alt="">
+        <img src="/images/zoomInOut.png" alt="">
+    </div>
+  </div>
 <script>
-
+    let setting_menu = document.getElementById("setting_menu");
+    setting_menu.style.display = 'none';
+    function closeCsMenu(){
+        setting_menu.style.display = 'none'
+    }
     function csMenu(){
-        alert("Comming Soon, you can't access right now")
+        setting_menu.style.display = 'block';
     }
 </script>
