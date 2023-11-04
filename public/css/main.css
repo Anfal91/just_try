@@ -181,16 +181,24 @@ body {
     height: auto;
     margin-top: 20px;
   }
-  @media screen and (max-width:450px) {
-    .contentCloseBtn{
-      left: 44.5% !important;
-    }
-  }
   @media screen and (max-width:749px) {
     .contentCloseBtn{
       left: 47%;
     }
+    .setting_menu
+    {
+      top: 25%;
+    }
   }
+  @media screen and (max-width:450px) {
+    .contentCloseBtn{
+      left: 44.5% !important;
+    }
+    .setting_menu{
+      top: 25% !important;
+    }
+  }
+
   .menuBtnLeft, .menuBtnRight{
     background-color: #0000009e;
     color: white;
